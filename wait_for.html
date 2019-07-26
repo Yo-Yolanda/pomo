@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/header_next.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/wait_for_section.css">
+	<title></title>
+</head>
+<body>
+	<header></header>
+	<div class="header_next"></div>
+	<section></section>
+	<footer></footer>
+</body>
+</html>
+<script src="js/new_file.js"></script>
+<script>
+	$(document).ready(function(){
+		$("header").load("html/header.html",function(){});
+		$(".header_next").load("html/header_next.html",function(){});
+		
+		$("section").load("html/wait_for_section.html",function(){});
+		
+		$("footer").load("html/footer.html",function(){
+			$(".footer a:nth-child(1) i").css({"background-image": "url(img/foot_wat_blue.jpg)"});
+			$(".footer a:nth-child(1) span").css({color: "#508bc3"});
+		});
+	});
+</script>
